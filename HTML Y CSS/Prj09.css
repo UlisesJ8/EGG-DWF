@@ -1,0 +1,68 @@
+h1{
+    color:green;
+}
+strong{
+    color: red;
+
+}
+.destacado{
+    color:yellow;
+}
+
+h2{
+    color:blue;
+}
+
+a{
+    color:red;
+    text-decoration: underline color:red;
+}
+
+em{
+    color:blue;
+}
+
+.especial{
+    color:blueviolet;
+}
+
+table,caption, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+th.especial{
+    color: orange;
+    
+}
+
+td, td em:last-child {
+    color:green;
+}
+
+strong:last-child{
+    color: orange;
+}
+
+th[scope="row"]:not([class]){
+    color:red;
+}
+
+tfoot{
+    color:red;
+}
+
+#adicional {
+    color:gray
+}
+
+#especial{
+color:rgb(249, 60, 255);
+}
+
+a:last-child{
+    color:green;
+    text-decoration-line: underline color green;
+}
+
