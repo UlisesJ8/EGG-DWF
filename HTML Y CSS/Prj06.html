@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Registrar un usuario</h1>
+    <form action="/controlador-registro" method="post" class="form-registro" encrypted= "multipart/form-data">
+    <label for="nombre">Nombre del usuario</label><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" required> <br>
+    <label for="contra">Contraseña del usuario</label><br>
+    <input type="password" id="contra" name="contra" placeholder="1234" required> <br>
+    <label for="edad">Edad del usuario</label><br>
+    <input type="number" id="edad" name="edad" placeholder="10" required> <br>
+    <label for="fechanac">Fecha de nacimiento del usuario</label><br>
+    <input type="date" id="fechanac" name="fechanac" name="fechanacimiento"> <br>
+    <label>Sexo del usuario </label><br>
+    <input type="radio" name="sexo" value="Hombre"> Hombre<br>
+    <input type="radio" name="sexo" value="Mujer"> Mujer<br>
+    <input type="radio" name="sexo" value="Otro"> Prefiero no decir<br>
+    <label>Pais nacimiento del usuario</label><br>
+    <select name="pais" >
+        <option>Argentina</option>
+        <option>Chile</option>
+        <option>Brasil</option>
+        <option>Uruguay</option>
+        <option>Paraguay</option>
+        <option>Peru</option>
+        <option>Ecuador</option>
+        <option>Venezuela</option>
+        <option>Bolivia</option>
+        <option>Colombia</option>
+    </select>
+    <br>
+    <button type="submit">Enviar</button>
+    <button type="reset">Borrar</button>
+    </form>
+</body>
+</html>
