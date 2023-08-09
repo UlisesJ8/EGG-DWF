@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <nav class="navbar navbar-expand-lg navBar">
+            <div class="containerImg">
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <img class="logo" src="/img/Egg.png" alt="Img logo egg" >
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse elementosNav" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto elementos">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Libros
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <li><a class="dropdown-item" th:href="@{/libro/lista}">Lista Libros</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Autores
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <li><a class="dropdown-item" th:href="@{/autor/lista}">Lista Autores</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Editoriales
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" th:href="@{/editorial/lista}">Listar Editoriales</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Perfil
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" th:href="@{/perfil}">Editar Perfil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                        </ul>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/logout">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="container m-5" >
+            
+            <table class="table table-dark" >
+                <thead>
+                    <tr>
+                        <th scope="col">Id del Usuario</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Foto de Perfil</th>
+<th scope="col">Rol</th>
+<th scope="col">Cambiar Rol</th><!-- comment -->
+<th scope="col">Modificar</th>
+                    </tr>
+                </thead>
+                <tbody th:each="usuario : ${usuarios}"> 
+                    <tr>
+                        <th scope="row" th:text="${usuario.id}"></th>
+                        <td th:text="${usuario.nombre}"></td>
+                        <td>
+                            <a> <img th:if= "${usuario.imagen != null}" class="fas fa-feather-alt" th:src="@{/imagen/perfil/__${usuario.id}__}">  </i> Modificar </a>
+                        </td>
+                        <td th:text="${usuario.rol}"> </td>
+                            
+                        <td>
+                            <a th:href="@{/admin/modificarRol/__${usuario.id}__"><i class="fas fa-feather-alt"></i> Cambiar</a>
+                        </td>
+                        
+                         <td>
+                            <a th:href="@{/usuario/modificar/__${usuario.id}__"><i class="fas fa-feather-alt"></i>Modificar</a>
+                        </td>
+                            
+                            </tr>
+
+                </tbody>
+            </table>
+
+            <div th:if="${exito}!=null" class="card text-white bg-success mb-3 mt-3 mensajeExito" >
+                <div class="card-body">
+                    <h5 class="card-title">Exito ð</h5>
+                    <p class="card-text" th:text="${exito}"></p>
+                </div>
+            </div>
+            <div th:if="${error}!=null" class="card text-white bg-danger mb-3 mensajeError" >
+                <div class="card-body">
+                    <h5 class="card-title">Error ð</h5>
+                    <p class="card-text" th:text="${error}"></p>
+                </div>
+            </div>
+
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <a th:href="@{/inicio}" class="btn btn-primary my-2">Volver</a>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </body>
+</html>

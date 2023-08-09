@@ -1,0 +1,46 @@
+body{
+    background-image: url(../img/75f72f06d71b06508862e8d7c05587ea.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+main{
+    height: 90%;
+    margin-bottom: -10%;
+    
+}
+
+
+footer{
+    height: 10%;
+    
+}
+
+
+.navbar.navBar {
+    margin-right: 5%;
+}
+
+h3{
+    text-decoration: underline;
+    text-align: center;
+}
+
+.tarjetaDeMasNoticias{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card{
+    
+    height: 200px !important;
+    width: 300px !important;
+    
+}
+.card-body{
+     overflow: hidden;
+     margin-bottom: 10%;
+}

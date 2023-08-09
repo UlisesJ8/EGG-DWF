@@ -1,0 +1,64 @@
+
+.navbar.navBar {
+    margin-right: 5%;
+}
+
+body{
+    background-image: url(../img/Brooklyn-bridge-New-York-USA_1920x1080.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+main{
+    height: 90%;
+    margin-bottom: -10%
+        
+}
+
+footer{
+    height: 10%
+    
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+p{
+    text-justify: initial;
+    text-align: justify;
+
+}
+
+h3{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 20px
+    
+}
+
+.tarjetaDeMasNoticias{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card{
+    height: 200px !important;
+    width: 300px !important;
+    
+}
+.card-body{
+     overflow: hidden;
+     margin-bottom: 10%;
+}
+
+.textoTituloh3{
+    background-color: blue;
+    color: white;
+    text-align: center;
+
+}

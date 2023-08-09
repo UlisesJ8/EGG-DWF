@@ -1,0 +1,48 @@
+body{
+    background-image: url(../img/images.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+
+
+main{
+    height: 90%;
+    margin-bottom: 10%
+}
+
+
+footer{
+    height: 10%;
+    text-align: left;
+    
+}
+
+h3{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.card{
+    height: 200px !important;
+    width: 300px !important;
+    
+    
+}
+
+
+.card-body{
+     overflow: hidden;
+     margin-bottom: 10%;
+}
+
+
+.tarjetaDeMasNoticias{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
