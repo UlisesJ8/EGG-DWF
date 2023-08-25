@@ -1,20 +1,25 @@
 import React, { Component } from 'react'
 import Cards from './Cards';
+import RickAndMortyService from '../../Services/RickAndMorty.service';
 
 export default class Main extends Component {
 
     constructor(props){
         super(props);
-        console.log("Hola desde el constructor");
+       this.state = { mascotas: [] };
     }
 
     componentDidMount(){
-        console.log("Holis desde componentDidmount");
+      
+      // RickAndMortyService.getAllCharacters()
+      // .then((data) => this.setState({mascotas: data.results}))
+      // .catch((error) => console.log(error));
+
     }
 
 
   render() {
-    console.log("Hola desde el render");
+   
     return (
       <div>
         <main>
@@ -32,7 +37,7 @@ export default class Main extends Component {
   </div>
 </section>
 
-<Cards></Cards>
+<Cards ></Cards>
 
 </main>
       </div>
